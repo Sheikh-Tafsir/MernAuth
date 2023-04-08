@@ -34,14 +34,11 @@ const Shoppingcart = () => {
 
     const placeOrder = () => {
         //alert(localStorageUsername + " " + localStorageMenuCart + " " + sum_total);
-        Axios.post('http://localhost:8000/api/orders', 
+        Axios.post('http://localhost:3001/orders', 
         {
             name:localStorageUsername,
             order:localStorageMenuCart,
             total:sum_total,
-        },
-        {
-            withCredentials: true
         }
         ).then((response) =>{
             if(response.data["success"] == true){

@@ -12,7 +12,7 @@ const Adminpanel = () => {
     const viewOrders = () => {
         //alert("hi");
         //alert(localStorageUsername + " " + localStorageMenuCart + " " + sum_total);
-        Axios.get('http://localhost:8000/api/post', 
+        Axios.get('http://localhost:3001/admin', 
         // {
         //     withCredentials: true
         // }

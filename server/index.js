@@ -69,7 +69,7 @@ app.post("/signup", (req,res)=>{
     insertUser(name, email, hashh)
     .then((userId) => {
       console.log(`New user inserted with id: ${userId}`);
-      res.send({ message: '1' });
+      res.send({ message: "1" });
     })
     .catch((err) => {
       console.error(err);
@@ -128,7 +128,7 @@ app.post("/login", (req,res)=>{
     .then((user) => {
       if (user) {
         console.log('User found');
-        res.send({ message: '1' });
+        res.send({ message: "1" });
       } else {
         console.log('User not found');
         res.send({ message: '0' });
